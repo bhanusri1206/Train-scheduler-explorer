@@ -1,0 +1,96 @@
+
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Schedule Explorer</title>
+    <link rel="stylesheet" href="index.css">
+</head> 
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🚆 RailExplore</div>
+        <span>Train Schedule Explorer</span>
+    </nav>
+
+    <section class="hero">
+        <h1>Explore Your Journey</h1>
+        <p>Find trains, compare timings and plan your journey.</p>
+
+        <div class="search-box">
+
+            <div class="field">
+                <label>From Station</label>
+                <input type="text" id="fromStation"
+                    placeholder="e.g. Chennai">
+            </div>
+
+            <div class="field">
+                <label>To Station</label>
+                <input type="text" id="toStation"
+                    placeholder="e.g. Bengaluru">
+            </div>
+
+            <div class="field">
+                <label>Journey Date</label>
+                <input type="date" id="journeyDate">
+            </div>
+
+            <button id="searchBtn">Search Trains</button>
+        </div>
+    </section>
+
+    <main class="main-container">
+
+        <div class="section-heading">
+            <div>
+                <h2>Train Schedules</h2>
+                <p>Explore available sample train schedules.</p>
+            </div>
+        </div>
+
+        <section class="filter-box">
+
+            <div class="field">
+                <label>Departure Time</label>
+                <select id="timeFilter">
+                    <option value="all">All Times</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="night">Evening / Night</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Train Type</label>
+                <select id="typeFilter">
+                    <option value="all">All Types</option>
+                    <option value="Express">Express</option>
+                    <option value="Superfast">Superfast</option>
+                    <option value="Passenger">Passenger</option>
+                </select>
+            </div>
+
+        </section>
+
+        <p id="statusMessage">
+            Enter your source and destination to search.
+        </p>
+
+        <section id="trainResults" class="train-results"></section>
+
+    </main>
+
+    <footer>
+        <h3>🚆 RailExplore</h3>
+        <p>Plan your journey with ease.</p>
+        <p>Mini Project | Train Schedule Explorer</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
