@@ -1,0 +1,75 @@
+
+[
+    {
+        "name": "Vande Bharat Express",
+        "number": "20833",
+        "source": "Hyderabad",
+        "destination": "Vijayawada",
+        "departure": "06:00",
+        "arrival": "10:00",
+        "type": "Vande Bharat"
+    },
+    {
+        "name": "Godavari Express",
+        "number": "12727",
+        "source": "Hyderabad",
+        "destination": "Visakhapatnam",
+        "departure": "17:30",
+        "arrival": "06:30",
+        "type": "Express"
+    },
+    {
+        "name": "Charminar Express",
+        "number": "12759",
+        "source": "Hyderabad",
+        "destination": "Chennai",
+        "departure": "18:00",
+        "arrival": "08:30",
+        "type": "Superfast"
+    },
+    {
+        "name": "East Coast Express",
+        "number": "18045",
+        "source": "Hyderabad",
+        "destination": "Vijayawada",
+        "departure": "08:30",
+        "arrival": "14:00",
+        "type": "Express"
+    },
+    {
+        "name": "Passenger Special",
+        "number": "67201",
+        "source": "Hyderabad",
+        "destination": "Warangal",
+        "departure": "12:30",
+        "arrival": "15:30",
+        "type": "Passenger"
+    },
+    {
+        "name": "Duronto Express",
+        "number": "12219",
+        "source": "Mumbai",
+        "destination": "Delhi",
+        "departure": "23:00",
+        "arrival": "15:00",
+        "type": "Superfast"
+    },
+    {
+        "name": "Shatabdi Express",
+        "number": "12028",
+        "source": "Bangalore",
+        "destination": "Chennai",
+        "departure": "06:00",
+        "arrival": "11:00",
+        "type": "Express"
+    },
+    {
+        "name": "Intercity Express",
+        "number": "12705",
+        "source": "Vijayawada",
+        "destination": "Hyderabad",
+        "departure": "15:00",
+        "arrival": "20:30",
+        "type": "Express"
+    }
+]

@@ -1,101 +1,93 @@
 
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f3f6fa;
-    color: #1e293b;
+    background: #f3f5fa;
+    color: #263248;
 }
 
-.navbar {
-    background: #102f4f;
+.header {
+    background: linear-gradient(135deg, #172554, #2563eb);
     color: white;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 23px;
-    font-weight: bold;
-}
-
-.hero {
-    background: linear-gradient(120deg, #123b59, #176b87);
-    color: white;
-    padding: 65px 8% 90px;
     text-align: center;
+    padding: 35px 15px;
 }
 
-.hero h1 {
-    font-size: 36px;
+.header h1 {
     margin-bottom: 12px;
 }
 
-.hero p {
-    color: #dbeafe;
-    margin-bottom: 35px;
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
 }
 
-.search-box {
+.search-box,
+.filters,
+.results-section {
     background: white;
-    color: #1e293b;
-    max-width: 1050px;
-    margin: auto;
     padding: 25px;
-    border-radius: 14px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) auto;
-    gap: 18px;
-    align-items: end;
-    text-align: left;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
 }
 
-.field {
+h2 {
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+#searchForm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
     gap: 9px;
 }
 
-.field label {
-    font-size: 14px;
+label {
     font-weight: bold;
 }
 
-input, select {
-    width: 100%;
+input,
+select {
     padding: 13px;
-    border: 1px solid #d1dbe5;
+    border: 1px solid #cbd5e1;
     border-radius: 7px;
-    outline: none;
-    font-size: 14px;
+    font-size: 15px;
+    width: 100%;
 }
 
-input:focus, select:focus {
-    border-color: #176b87;
+input:focus,
+select:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
 }
 
 button {
-    background: #176b87;
+    background: #2563eb;
     color: white;
     border: none;
-    padding: 14px 22px;
     border-radius: 7px;
+    padding: 13px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 14px;
     font-weight: bold;
+    align-self: end;
 }
 
 button:hover {
-    background: #123b59;
+    background: #172554;
 }
 
 button:disabled {
@@ -103,170 +95,112 @@ button:disabled {
     cursor: not-allowed;
 }
 
-.main-container {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-.section-heading {
+.filter-group {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
+    gap: 15px;
 }
 
-.section-heading h2 {
-    font-size: 25px;
-    color: #123b59;
-    margin-bottom: 8px;
-}
-
-.section-heading p {
-    color: #64748b;
-    font-size: 14px;
-}
-
-.filter-box {
-    display: flex;
-    gap: 20px;
-    background: white;
-    padding: 22px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-}
-
-.filter-box .field {
-    width: 220px;
+.filter-group select {
+    flex: 1;
 }
 
 #statusMessage {
-    margin: 20px 0;
     color: #64748b;
-    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .train-results {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 16px;
 }
 
 .train-card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    padding: 22px;
-    border-radius: 12px;
-    transition: 0.3s;
+    border: 1px solid #dbe3f0;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.2s;
 }
 
 .train-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-color: #2563eb;
+    transform: translateY(-2px);
 }
 
-.train-header {
+.train-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-.train-header h3 {
-    color: #123b59;
-    font-size: 18px;
+.train-name {
+    color: #172554;
+    font-size: 19px;
+    font-weight: bold;
 }
 
 .train-number {
     color: #64748b;
-    font-size: 13px;
     margin-top: 6px;
 }
 
 .train-type {
-    background: #e0f2fe;
-    color: #0369a1;
+    background: #dbeafe;
+    color: #1d4ed8;
     padding: 7px 12px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 13px;
+    height: fit-content;
 }
 
-.journey {
+.journey-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
-.journey-time {
-    font-size: 22px;
-    font-weight: bold;
-    color: #123b59;
+.journey-details h3 {
+    font-size: 21px;
+    color: #172554;
 }
 
-.station {
-    font-size: 13px;
+.journey-details p {
     color: #64748b;
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 .duration {
     text-align: center;
-    color: #64748b;
-    font-size: 12px;
-}
-
-.line {
-    width: 65px;
-    height: 2px;
-    background: #94a3b8;
-    margin: 8px auto;
+    color: #2563eb;
+    font-weight: bold;
 }
 
 footer {
-    background: #102f4f;
-    color: white;
     text-align: center;
-    padding: 30px;
-    line-height: 1.8;
+    padding: 25px;
+    background: #172554;
+    color: white;
 }
 
-@media (max-width: 800px) {
-    .search-box {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .train-results {
-        grid-template-columns: 1fr;
-    }
+footer p {
+    margin: 5px;
 }
 
-@media (max-width: 550px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 27px;
-    }
-
-    .search-box {
+@media (max-width: 700px) {
+    #searchForm {
         grid-template-columns: 1fr;
     }
 
-    .filter-box {
+    .filter-group {
         flex-direction: column;
     }
 
-    .filter-box .field {
-        width: 100%;
+    .journey-details h3 {
+        font-size: 16px;
     }
 
-    .journey-time {
-        font-size: 18px;
-    }
-
-    .line {
-        width: 35px;
+    .train-top {
+        flex-direction: column;
     }
 }

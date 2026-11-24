@@ -1,6 +1,3 @@
-
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,86 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Train Schedule Explorer</title>
     <link rel="stylesheet" href="index.css">
-</head> 
+</head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">🚆 RailExplore</div>
-        <span>Train Schedule Explorer</span>
-    </nav>
+    <header class="header">
+        <h1>🚆 Train Schedule Explorer</h1>
+        <p>Explore trains and plan your journey easily</p>
+    </header>
 
-    <section class="hero">
-        <h1>Explore Your Journey</h1>
-        <p>Find trains, compare timings and plan your journey.</p>
+    <main class="container">
 
-        <div class="search-box">
+        <section class="search-box">
+            <h2>Find Your Train</h2>
 
-            <div class="field">
-                <label>From Station</label>
-                <input type="text" id="fromStation"
-                    placeholder="e.g. Chennai">
-            </div>
+            <form id="searchForm">
 
-            <div class="field">
-                <label>To Station</label>
-                <input type="text" id="toStation"
-                    placeholder="e.g. Bengaluru">
-            </div>
+                <div class="form-group">
+                    <label for="source">From Station</label>
+                    <input type="text" id="source"
+                        placeholder="e.g. Hyderabad"
+                        list="stations" required>
+                </div>
 
-            <div class="field">
-                <label>Journey Date</label>
-                <input type="date" id="journeyDate">
-            </div>
+                <div class="form-group">
+                    <label for="destination">To Station</label>
+                    <input type="text" id="destination"
+                        placeholder="e.g. Vijayawada"
+                        list="stations" required>
+                </div>
 
-            <button id="searchBtn">Search Trains</button>
-        </div>
-    </section>
+                <datalist id="stations">
+                    <option value="Hyderabad">
+                    <option value="Vijayawada">
+                    <option value="Chennai">
+                    <option value="Bangalore">
+                    <option value="Mumbai">
+                    <option value="Delhi">
+                    <option value="Warangal">
+                    <option value="Visakhapatnam">
+                </datalist>
 
-    <main class="main-container">
+                <div class="form-group">
+                    <label for="journeyDate">Journey Date</label>
+                    <input type="date" id="journeyDate" required>
+                </div>
 
-        <div class="section-heading">
-            <div>
-                <h2>Train Schedules</h2>
-                <p>Explore available sample train schedules.</p>
-            </div>
-        </div>
+                <button type="submit" id="searchButton">
+                    Search Trains
+                </button>
 
-        <section class="filter-box">
+            </form>
+        </section>
 
-            <div class="field">
-                <label>Departure Time</label>
-                <select id="timeFilter">
-                    <option value="all">All Times</option>
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="night">Evening / Night</option>
+        <section class="filters">
+            <h2>Filter Trains</h2>
+
+            <div class="filter-group">
+                <select id="departureFilter">
+                    <option value="all">All Departure Times</option>
+                    <option value="morning">Morning (5 AM - 12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                    <option value="evening">Evening (5 PM - 9 PM)</option>
+                    <option value="night">Night (9 PM - 5 AM)</option>
                 </select>
-            </div>
 
-            <div class="field">
-                <label>Train Type</label>
-                <select id="typeFilter">
-                    <option value="all">All Types</option>
+                <select id="trainTypeFilter">
+                    <option value="all">All Train Types</option>
                     <option value="Express">Express</option>
                     <option value="Superfast">Superfast</option>
                     <option value="Passenger">Passenger</option>
+                    <option value="Vande Bharat">Vande Bharat</option>
                 </select>
             </div>
-
         </section>
 
-        <p id="statusMessage">
-            Enter your source and destination to search.
-        </p>
+        <section class="results-section">
+            <h2>Available Trains</h2>
 
-        <section id="trainResults" class="train-results"></section>
+            <p id="statusMessage">
+                Enter your journey details to search trains.
+            </p>
+
+            <div id="trainResults" class="train-results"></div>
+        </section>
 
     </main>
 
     <footer>
-        <h3>🚆 RailExplore</h3>
-        <p>Plan your journey with ease.</p>
-        <p>Mini Project | Train Schedule Explorer</p>
+        <p>Train Schedule Explorer | Plan Your Journey</p>
     </footer>
 
     <script src="script.js"></script>
